@@ -1,0 +1,8 @@
+<div class="p-8">
+    <h1 class="text-5xl text-center mb-8 text-gray-500">Meal Categories</h1>
+    <ul class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <app-category-list *ngFor="let category of categories$ | async" [category]="category"></app-category-list>
+    </ul>
+
+    <app-load [loading]="loading"></app-load>
+</div>

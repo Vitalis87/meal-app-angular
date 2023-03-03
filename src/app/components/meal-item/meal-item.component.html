@@ -1,0 +1,12 @@
+<div class="bg-white shadow-lg rounded-lg">
+    <img [src]='meal.strMealThumb' [alt]="meal.strMeal" class="rounded-t-lg h-60 w-full object-cover" />
+    <div class="p-4">
+        <h3 class="font-semibold text-lg text-center mb-4 h-14">{{meal.strMeal}}</h3>
+        <div class="flex items-center justify-between">
+            <a class="px-3 py-2 border-2 border-red-600 text-white bg-red-600 rounded-md hover:bg-white hover:text-black"
+                [href]="meal.strYoutube" target="_blank">YouTube</a>
+            <a class="px-4 py-2 text-white border-2 border-orange-600 bg-orange-600 rounded-md hover:bg-white hover:text-black"
+                [routerLink]="['/search-meal', meal.idMeal]">View</a>
+        </div>
+    </div>
+</div>

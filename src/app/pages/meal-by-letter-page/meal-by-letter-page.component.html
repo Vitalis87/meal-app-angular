@@ -1,0 +1,7 @@
+<h2 class="text-4xl text-center text-gray-500 p-4">Search Meals By Letter</h2>
+<div class="flex justify-center items-center gap-1 sm:gap-2 h-14">
+    <a (click)="setMealsByLetter(letter)" class="text-xs sm:text-sm md:text-base lg:text-lg cursor-pointer hover:text-orange-600  hover:scale-125" *ngFor="let letter of letters | lettersArray">{{letter}}</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
+    <app-meal-item *ngFor="let meal of meals$ | async" [meal]="meal"></app-meal-item>
+</div>

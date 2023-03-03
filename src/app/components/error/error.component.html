@@ -1,0 +1,4 @@
+<div *ngIf="errorService.error$ | async as error" class="bg-red-600 h-16 flex items-center justify-center rounded-lg gap-2 p-4">
+        <p class="text-sm md:text-base lg:text-lg text-white mb-0">{{error}}</p>
+        <ng-icon class="text-white text-xl cursor-pointer" name="heroPlusCircle" (click)="errorService.clear()"></ng-icon>
+</div>

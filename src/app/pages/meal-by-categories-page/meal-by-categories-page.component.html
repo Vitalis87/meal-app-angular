@@ -1,0 +1,7 @@
+<h1 class="text-4xl text-center text-gray-500 my-8"><span class="font-bold">Category: </span>{{category}}</h1>
+<ul class="grid grid-cols-1 md:grid-cols-3">
+    <li *ngFor="let meal of meals" class="p-4 cursor-pointer" [routerLink]="['/search-meal', meal.idMeal]">
+        <img [src]="meal.strMealThumb" class="rounded-lg"/>
+        <h3 class="text-center text-lg mt-4">{{meal.strMeal}}</h3>
+    </li>
+</ul>
